@@ -190,10 +190,10 @@ namespace DesignPatternChallenge
             report3.Generate();
 
             // Perguntas para reflexão:
-            // - Como criar relatórios complexos sem construtores gigantes?
-            // - Como garantir que configurações obrigatórias sejam definidas?
-            // - Como reutilizar configurações comuns entre relatórios?
-            // - Como tornar o processo de criação mais legível e fluente?
+            // - Como criar relatórios complexos sem construtores gigantes?     - OK
+            // - Como garantir que configurações obrigatórias sejam definidas?  - OK
+            // - Como reutilizar configurações comuns entre relatórios?         - OK
+            // - Como tornar o processo de criação mais legível e fluente?      - OK
         }
     }
 }

@@ -18,8 +18,8 @@ public interface ISalesReportBuilder
 	ISalesReportBuilder WithCharts(bool includeCharts, string chartType);
 	ISalesReportBuilder WithSummary(bool includeSummary);
 	ISalesReportBuilder WithFilters(List<string> filters);
-	ISalesReportBuilder WithSortBy(string sortBy);
-	ISalesReportBuilder WithGroupBy(string groupBy);
+	ISalesReportBuilder WithSorting(string sortBy);
+	ISalesReportBuilder WithGrouping(string groupBy);
 	ISalesReportBuilder WithTotals(bool includeTotals);
 	ISalesReportBuilder WithOrientation(string orientation);
 	ISalesReportBuilder WithPageSize(string pageSize);

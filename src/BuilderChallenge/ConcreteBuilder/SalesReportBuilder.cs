@@ -69,13 +69,13 @@ public class SalesReportBuilder : ISalesReportBuilder
         return this;
     }
 
-    public ISalesReportBuilder WithSortBy(string sortBy)
+    public ISalesReportBuilder WithSorting(string sortBy)
     {
         _report.SortBy = sortBy;
         return this;
     }
 
-    public ISalesReportBuilder WithGroupBy(string groupBy)
+    public ISalesReportBuilder WithGrouping(string groupBy)
     {
         _report.GroupBy = groupBy;
         return this;

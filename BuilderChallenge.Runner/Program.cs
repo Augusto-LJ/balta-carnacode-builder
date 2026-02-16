@@ -22,8 +22,8 @@ public class Program
             .WithSummary(true)
             .WithColumns(["Produto", "Quantidade", "Valor"])
             .WithFilters(["Status=Ativo"])
-            .WithSortBy("Produto")
-            .WithGroupBy("Categoria")
+            .WithSorting("Produto")
+            .WithGrouping("Categoria")
             .WithTotals(true)
             .WithOrientation("Portrait")
             .WithPageSize("A4")
@@ -31,14 +31,7 @@ public class Program
             .WithCompanyLogo("logo.png")
             .WithWaterMark("Confidencial");
 
-        try
-        {
-            pdfReport1.Gerar();
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"\nErro ao gerar o relatório {nameof(pdfReport1)}: {ex.Message}");
-        }
+        pdfReport1.Gerar();
 
         var pdfReport2 = pdfReport1
             .WithEndDate(new DateTime(2024, 12, 31))
@@ -46,20 +39,13 @@ public class Program
             .WithHeader(true, "Relatório de Vendas Anuais")
             .WithSummary(false)
             .WithFilters([])
-            .WithSortBy("")
-            .WithGroupBy("")
+            .WithSorting("")
+            .WithGrouping("")
             .WithOrientation("Landscape")
             .WithPageNumbers(false)
             .WithWaterMark("");
 
-        try
-        {
-            pdfReport2.Gerar();
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"\nErro ao gerar o relatório {nameof(pdfReport2)}: {ex.Message}");
-        }
+        pdfReport2.Gerar();
 
         var builderhtmlReport1 = new SalesReportBuilder();
         var htmlReport1 = director.BuildHtmlReport(builderhtmlReport1);
